@@ -1,0 +1,114 @@
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+    </head>
+    <script>
+      //https://user-images.githubusercontent.com/48408497/87906344-716f0980-ca9d-11ea-89e9-232a7a037f0c.png
+    </script>
+    <body>
+        
+      <a href="/">
+        <img class="tip" src="https://user-images.githubusercontent.com/48408497/87905599-f2c59c80-ca9b-11ea-8ff3-ee6c704137e5.png"
+      ></a>
+        <div class="cont">
+
+          <div class="form sign-in">
+            <h2>Welcome to be 建</h2>
+            <label>
+              <span>ID</span>
+              <input id="login_id" type="text" />
+            </label>
+            <label>
+              <span>Password</span>
+              <input id="login_pwd" type="password" />
+            </label>
+            <button class="forgot-pass">Forgot password?</button>
+            <button id="btn_login" type="button" class="submit">Sign In</button>
+            <button type="button" class="fb-btn">Connect with <span>facebook</span></button><br>
+            <button type="button" class="ka-btn" style="position: relative; bottom: 10px;">Connect with <span>kakao</span></button><br>
+            <p id=message4 style="text-align: center;"><br></p>
+          </div>
+
+          <div class="sub-cont">
+
+            <div class="img">
+              <div class="img__text m--up">
+                <h2>Not Registered?</h2>
+                <p>Sign up here</p>
+              </div>
+              <div class="img__text m--in">
+                <h2>One of us?</h2>
+                <p>If you already has an account,<br> just sign in.</p>
+              </div>
+
+              <div class="img__btn">
+                <span class="m--up">Sign Up</span>
+                <span class="m--in">Sign In</span>
+              </div>
+            </div>
+
+            <div class="form sign-up">
+              <h2 id="message3">Thanks for signing up!</h2>
+              <div class="divsignup">
+              <label>
+                <span>ID</span>
+                <input id="signup_id" type="text" >
+              </label>
+              <label>
+                <span>Name</span>
+                <input id="signup_name" type="text" >
+              </label>
+              <label>
+                <span>Password</span>
+                <input id="signup_pwd" type="password" >
+              </label>
+              <label>
+                <span>Password Confirm</span>
+                <input id="confirm_pwd" type="password" >
+              </label>
+              <label>
+                <span>Email</span>
+                <input id="signup_email" type="email" >
+              </label>
+              <label>
+                <span>Address</span>
+                <input id="signup_adr" type="text" >
+              </label>
+              <label>
+                <span>Phone Number</span><br>
+                <input id="tel1" type="text" class="tel" placeholder="010">-
+                <input id="tel2" type="text" class="tel" placeholder="1234">-
+                <input id="tel3" type="text" class="tel" placeholder="5678">
+              </label>
+              <label>
+                <span>Vegetarian Class</span><br>
+                <select id="selectClass">
+                  <option selected>Choose class</option>
+                  <option>Fruitarian</option>
+                  <option>Vegan</option>
+                  <option>Lacto</option>
+                  <option>Ovo</option>
+                  <option>Lacto-ovo</option>
+                  <option>Pesco</option>
+                  <option>Pollo</option>
+                  <option>Flexitarian</option>
+              </select>
+              </label>
+            </div>
+              <button id="btn_signup" type="button" class="submit">Sign Up</button>
+              <button type="button" class="fb-btn">Join with <span>facebook</span></button>
+              <button type="button" class="ka-btn" style="position: relative; top: 10px;">Join with <span>kakao</span></button><br>
+              <button id="btn_checkid" type="button" class="check">check</button>
+              <p id=message style="text-align: center;"></p>
+              <p id=message2 style="text-align: center;"></p>
+              
+            </div>
+          </div>
+        </div>
+        
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="/javascripts/login.js"></script>
+
+</html>

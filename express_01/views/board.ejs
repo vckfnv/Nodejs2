@@ -1,0 +1,72 @@
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+      <link rel="stylesheet" type="text/css" href="/stylesheets/board.css">
+    </head>
+    <body>
+        <a href="/">
+            <img class="tip" src="https://user-images.githubusercontent.com/48408497/87905599-f2c59c80-ca9b-11ea-8ff3-ee6c704137e5.png">
+        </a> 
+        <div class="cont2">
+            <div class="container">
+                <div class="limit">
+                    <br>
+                    <h1>Welcome! <%=username%></h1><br>
+                    <div>
+                    <form id="class_form" action='/board/class' method="POST">
+                        <select id="veg_class" name="veg_class">
+                            <option selected>Class</option>
+                            <option>Fruitarian</option>
+                            <option>Vegan</option>
+                            <option>Lacto</option>
+                            <option>Ovo</option>
+                            <option>Lacto-ovo</option>
+                            <option>Pesco</option>
+                            <option>Pollo</option>
+                            <option>Flexitarian</option>
+                        </select>
+                        <button id='btnClass' class='searchbtn'>search</button>
+                    </form>
+                    <br>
+                    <form id="search_form" action="/board/search" method="post">
+                        <select id="search_ind" name="search_ind">
+                            <option selected>Class</option>
+                            <option>Food</option>
+                            <option>Agri</option>
+                            <option>Beauty</option>
+                        </select>
+                        <input class='searchclass' name='searchkey' type="text">
+                        
+                        <button id = 'btnSubmit' class='searchbtn' style="color:black; border: 2px solid black">search</button>
+                    </form>
+                    </div> 
+                    <p> 
+                    <% if (typeof manager != "undefined" ){%>
+                        <br><button id = 'btnEdit' class='editbtn' style="color:black; border: 2px solid black">Edit</button></p><br>
+                    <%}%>
+                        
+                    <br>
+                    
+                    <hr>
+                    <%data.forEach(function(item,index){%>
+                        <a href = "/board/info?item_id=<%=item.item_id%>">
+                        <div class="show"><%=item.item_name%>
+                        <img src="/images/vegan.png"></div></a>
+                        
+                    <%});%>
+                    
+    
+                </div>
+                <div style="text-align: center">
+                    <button id="btn_prev" style="color: black; display: inline; margin: auto;">previous page</button> &nbsp;
+                    <button id="btn_next" style="color: black; display: inline; margin: auto;">next page</button>
+                </div>
+                <input id="page" type="text" value=<%=pageNum%>>
+            </div>
+        </div>
+        <button id="btn_logout" style="background-color: #708843;">logout</button>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="/javascripts/board.js"></script>
+</html>

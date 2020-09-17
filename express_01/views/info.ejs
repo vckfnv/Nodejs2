@@ -1,0 +1,33 @@
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+      <link rel="stylesheet" type="text/css" href="/stylesheets/board.css">
+    </head>
+    <body>
+        <a href="/">
+            <img class="tip" src="https://user-images.githubusercontent.com/48408497/87905599-f2c59c80-ca9b-11ea-8ff3-ee6c704137e5.png">
+        </a> 
+        <div class="cont2">
+            <div class="container"> 
+                <br>
+                <div style="text-align: center;">
+                    <a href="/board">Go to List</a>
+                </div><br><hr>
+                <div class="limit">
+                    <br>
+                    
+                    <h3>you just clicked <br><h1>'<%=item_name%>'!</h1></h3><br>
+                    <h1><%=data.item_price%>￦</h1><br>
+                    <h3>item's infos: <%=data.item_exp_info%></h3>
+                    
+    
+                </div>
+               
+            </div>
+        </div>
+        <button id="btn_logout">logout</button>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="/javascripts/board.js"></script>
+</html>
